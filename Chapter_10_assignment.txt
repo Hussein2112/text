@@ -1,0 +1,31 @@
+
+1- what command do you run to find all the listening ports on your system.
+
+2- list two ways you can set your hostname webserser.example.com
+
+3- what is the directory name where you can find all your adapter config files
+
+4- Give an example of Linux proxy software
+
+5- What is a benefit of clusering servers
+
+6- what resource do clustered database systems normally share
+
+7- Give one example of NoSQL database
+
+8- Give one example of a Container Software
+
+9- what is the command to bring down interface eth0
+
+10- List three ways to interact with the NetworkManager
+
+11- What is a command to show the MAC address of interface enp0s3 (hint: ip comamnd)
+
+12- what is the significance of the /etc/host file
+
+13- list 2 commands you can use for name resolution
+
+14- how would you list all the ports running on your machine
+
+15- how can you verify if sshd is running or not
+  

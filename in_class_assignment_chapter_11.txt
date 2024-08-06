@@ -1,0 +1,17 @@
+1- as root or with sudo, create a directory called /root/mypackages 
+
+2- Download the nmap package in to the directory /root/mypackages
+
+yum install --downloadonly --downloaddir=/root/mypackages nmap
+
+3- Install the nmap package using rpm command
+
+4- Remove the package using rpm command
+
+5- Install the same package again using yum command. Make sure you install the package in /root/packages
+
+
+Use Nmap to scan the hosts in your subnet
+https://phoenixnap.com/kb/nmap-command-linux-examples 
+
+

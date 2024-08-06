@@ -1,0 +1,28 @@
+1- List the system compenents controlled by the kernel
+
+2- What is the difference between Kernel Space and User Space?
+
+
+3- List the names of kernel types
+
+
+4- What is an advantage the Monolithic Kernel has over the Microkernel
+
+
+5- List one of the disadvantages of a Monolithic Kernel
+
+
+6- What command will you use to find your kernel version
+
+
+7- How will you find if you are using Centos or Ubuntu ....
+
+
+8- Which Kernel Layer handles system calls sent from user space to the kernel.
+
+9- List Two major functions performed by the kernel
+
+10- why is modprobe command preferred over insmod to add a new module to the kernel
+
+11- what command will you use to list all the modules currently loaded on the system.
+

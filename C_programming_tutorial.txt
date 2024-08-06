@@ -1,0 +1,18 @@
+/* https://www.codingunit.com/c-tutorial-first-c-program-hello-world
+
+
+#include<stdio.h>
+
+	int main()
+
+	{
+
+		printf(Hello World\n);
+
+		return 0;
+
+	}
+
+
+
+

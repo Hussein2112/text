@@ -1,0 +1,255 @@
+Storage Management:
+=======================
+
+Note:
+    Make sure to create a snapshot of your VM or clone it.
+
+
+
+Creating Partitions, Physical Volumes, Volume Groups and Logical Volumes 
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+Work begins:
+
+1- First, Add 6 disks to your Virtual Machine to practice Storage Management 
+   by downloading the document "How to add a disk on your virtual Machine.doc" from the link below:
+   http://45.32.212.147:8080/virtualbox
+
+2- Create partitions on all the disks using fdisk or parted.
+   Below is two links detailing how to use fdisk and parted respectively:
+   https://www.thegeekdiary.com/linux-unix-how-to-create-primary-partition-using-fdisk/
+   https://www.thegeekdiary.com/how-to-create-a-partition-using-parted-command/
+Note:
+   When creating the partition with parted, if you run into the error message 
+  "The resulting partition is not properly aligned for best performance"
+  Type "Ignore" or follow the link below to resolve the issue.
+  https://rainbow.chard.org/2013/01/30/how-to-align-partitions-for-best-performance-using-parted/
+
+
+Step 1a: Use either the fdisk or parted command to partition the disk. #Or you can download the script /var/www/html/scripts/partition_full.sh 
+Step 1b: Using LVM we will create the Physical Volume (PVs)
+Step 2: Using LVM we will create the Volume Group    (VG)
+Step 3: Using LVM we will create the Logical Volume  (LV)
+Step 4: We will format a ext4 filesystem on the dblv
+Step 5: We will create a mount point for the dblv and name it /mysql
+Step 6: We will add mount point /mysql to /etc/fstab in order the filesystems to get mounted after reboot
+
+==> After finishing the database filesystem work, we will work on the application filesystem as xfs type
+
+Bonus Steps:
+1- add one more disk to dbvg,  extend the lv  and eventually increase the filesystem size.
+2- add one more disk to appvg, extend the lv and eventually increase the filesystem size.
+
+
+=================================================================
+
+
+
+LVM (Logical Volume Manager) Examples:
+--------------------------------------
+
+The following examples will show how to create a PV, VG and LV and resize them as well.
+
+
+#Before we create the phyical volumes (PVs) we will need to create a partition on the disk
+ using fdisk or parted
+
+ex:
+# fdisk /dev/sdX (Where X stands for your diskname)
+# parted /dev/sdX (Where X stands for your diskname)
+
+The following parted examples create 2 partions on the same disk. /dev/sdb in this case
+  # parted -s /dev/sdb  mklabel gpt mkpart primary  1MiB  100MiB
+  # parted -s /dev/sdb  print
+  # parted -s /dev/sdb  mkpart primary  100MiB  200MiB
+
+
+ LVM works on three concepts/features
+=======================================
+1- Physical Volume (PV):- Initial stage to convert the LVM partition
+2- Volume Group (VG):- Combination of physical volume
+3- Logical Volume (LV):- Create a partition inside the volume group
+
+ 
+Step 1:
+--> First Create the Physical Volumes aka PVs
+    -----------------------------------------
+pvcreate <device_name>
+ Example:
+ #pvcreate /dev/sdb1 /dev/sdc1     #Two disks for the database
+ #pvs (PV info without description)
+ #pvdisplay (PV info with description)
+
+Step 2:
+--> Next create the Volume Groups.
+    -----------------------------
+vgcreate <vg_name> <device_name device_name ...>
+ #vgcreate dbvg /dev/sdb1 /dev/sdc1  
+ #vgs (VG info without description)
+ #vgdisplay (VG info with description) 
+
+Step 3:
+--> Third Step is to create the Logical Volumes with ext4 filesytem:
+    --------------------------------------------
+lvcreate -L <size> -n(name)<lv_name> <vg_name>
+ #lvcreate -L 800M -n dblv dbvg
+
+ #lvs (LV info without description)
+ #lvdisplay (LV info with description)
+
+Step4:
+  Format the disk as ext4 filesytem
+ #mkfs.ext4 /dev/mapper/dbvg-dblv
+#Note: if you are using device mapper, your lv will be created in /dev/mapper/dbvg-dblv otherwise /dev/dbvg/dblv
+
+Step 5:
+      Create the mountpoint
+ #mkdir /mysql 
+
+
+Step 6:
+For permanent mounting
+ #vim /etc/fstab # And type the line below if your LV name is /dev/mapper/dbvg-dblv
+
+/dev/mapper/dbvg-dblv /mysql ext4 defaults 0 0
+
+ :wq!
+ #mount -a
+ #cd /mysql
+ #ls
+
+The End for the DB logical Volume
+==================================================================
+==================================================================
+==================================================================
+
+Steps for the xfs filesystem:
+--> How to create the Logical Volume with xfs filesytem Example:
+    ------------------------------------------------------------
+Using a previously partitioned disks. Example /dev/sdd1 /dev/sde1
+1- pvcreate /dev/sdd1 /dev/sde1         ##Creating two physical volumes
+2- vgcreate appvg /dev/sdd1 /dev/sde1   #Creating the VG appvg with two disks
+3- lvcreate -L 1.5G -n applv  appvg     #Creating a 1.5G LV named applv
+4- mkfs.xfs /dev/mapper/appvg-applv     #Formating the LV applv as xfs filesystem
+5- mkdir /apps                          #Creating the mount point
+6- vim /etc/fstab                       #Edit the /etc/fstab filesytem
+7- /dev/mapper/appvg-applv   /apps  xfs   defaults 0 0      #Add this line to /etc/fstab
+8- mount -a # To mount the filesystems found in /etc/fstab
+9- Run the command df -Th # To verify the filesystem is mounted
+/etc/fstab fields explained:
+https://linoxide.com/file-system/understanding-each-entry-of-linux-fstab-etcfstab-file/
+
+
+Bonus Steps:
+To extend the logical volume. ext4
+------------------------------------------
+-If needed, Make the new disk a PV after formating with fdisk or parted. Example: "pvcreate /dev/sdf1" 
+-add the new disk to the VG.                                             Example: "vgextend dbvg /dev/sdf1"
+
+
+ #Increase the size of the LV as below Example
+lvextend -L +<additional Size> </dev//mapper/lv_name>
+ #lvextend -L +300M /dev/mapper/dbvg-dblv          #Increasing the dblv logical volume by 300M
+
+ #lvs
+ #df -Th ( You will not see the new size yet)
+resize2fs <dev_name/vg_name/lv_name>  ##use this command if the LV (logical Volume) was of type ext4
+ #resize2fs /dev/mapper/dbvg-dblv  ## We use resize2fs because the LV was formatted as ext4 not xfs
+
+#
+#
+#
+To extend the logical volume. xfs
+------------------------------------------
+==> If the logical volume is of type xfs use the following commands
+#lvextend -L +1G /dev/mapper/appvg-applv
+#xfs_growfs /dev/mapper/appvg-applv
+ #df -Th 
+=====================================================================================ss
+=====================================================================================ss
+
+To extend the volume group
+--------------------------
+
+ #pvcreate /dev/sdd1
+ #vgextend dbvg /dev/sdd1
+ #vgs
+
+ #lvextend -L +500M /dev/dbvg/dblv
+ #lvs
+ #resize2fs /dev/dbvg/linux
+ #df -Th
+=====================================================================================ss
+=====================================================================================ss
+=====================================================================================ss
+
+Reducing VG Size
+-----------------------
+ #vgreduce dbvg /dev/sdd1
+
+Reducing the LVM Size
+
+ #umount /lvm
+ #e2fsck -f /dev/dbvg/dblv 
+LVM (Logical Volume Manager)
+ #resize2fs /dev/dbvg/linux 500M
+ #lvreduce -L 500M /dev/dbvg/linux
+ #mount -a
+ #df -Th
+ #lvs
+ #vgs 
+================================================================================================
+
+
+
+Another Example of creating an xfs filesystem, this time with different extent size on the VG.
+================================================================================================
+# Now let us create another volume group with two disks in it
+# We will format the filesystem as XFS type this time
+
+
+# vgcreate -s 16M  appvg /dev/sdd1 /dev/sde1
+
+We created the VG with extent size of 16M. The default is 4M
+
+# lvcreate -l 50 -n applv appvg
+We created the LV using extents not Megabytes or Gigabytes
+
+# mkfs.xfs /dev/appvg/applv
+We formated the filesystem as type XFS
+
+# mkdir /apps
+This above is the directory we are going to use a mount point for the LV applv
+
+# mount /dev/appvg/applv /apps
+This command will mount the lv on the /apps mount point. Not we can create 
+files and directories in that partition
+
+But to make the mount point permanent (i.e come back after the reboot)
+we need to add it to the /etc/fstab file
+
+
+# vi /etc/fstab
+
+/dev/appvg/applv /apps xfs defaults 0 0
+
+:wq
+
+
+Now let us add 200M on the LV so we can increase it
+First, check if you have that much space available by running the command
+# vgdisplay appvg|grep Free
+ Free  PE / Size       76 / 1.19 GiB
+
+Notice there is 1.19GiB free in our case
+Now let us add 200M on the LV
+
+# lvresize -L +200M /dev/appvg/applv ###Please do NOT forget the + sign
+
+Check if the size changed with the command
+#df -Th
+
+The size will not change unless you run the flowing command
+#xfs_growfs /dev/appvg/applv
+================================================================================== 

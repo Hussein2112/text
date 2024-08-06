@@ -1,0 +1,36 @@
+#!/bin/bash
+
+echo
+echo
+echo
+
+echo "There are currently $# users that we are about to create"
+echo "And their Names are $@"
+
+echo
+echo
+echo
+echo
+#The script creates users that are supplied as an argrument to the script"
+for i in $@
+do
+ #echo "About to create user $i"
+ echo "About to create the  user $i"
+ sleep 2
+ useradd $i 2>/dev/null
+ if (( $? > 0 ))
+ then
+  echo "user $i Already exists
+        Please investigate with command
+        grep $i /etc/passwd"
+ else
+ echo '-------------------------------------'
+ echo "Creating password for user $i"
+ echo "password!23" |passwd --stdin $i 2>/dev/null
+ fi
+ echo '-------------------------------------'
+ echo '-------------------------------------'
+echo
+echo
+      sleep 3
+done

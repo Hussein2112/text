@@ -1,0 +1,47 @@
+find  is very versatile but expensive on the cpu
+by name
+by size 
+by owner
+by group
+by suid
+by sgid  etc
+by iname
+-ctime
+-empty
+-user
+-nouser
+
+
+
+find . -name hosts
+
+#need root privilege to search outside of your home directory
+
+sudo find / -name passwd
+
+find . -ctime 1  #changed in the last 24 hours
+find . -atime 2  #accessed in the last 48 hours
+
+find /home/stdnt16 -newer passwd
+
+find . -empty
+
+find . -empty -type f 
+
+find . -empty -type f -exec rm -f {} \;
+
+find ~ -name ".tar.*" -exec cp -v {} /home/stdnt16/test/ \;
+
+
+####locate, updatedb; whereis
+locate passwd  uses own db and much faster than locate
+locate needs to be updated 
+updatedb
+
+locate updatedb.conf  ---cat /etc/updatedb.conf
+
+whereis
+whereis cd
+
+
+

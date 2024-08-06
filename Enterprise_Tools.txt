@@ -1,0 +1,53 @@
+IT Management Tools:
+====================
+https://enlyft.com/tech/it-management-software
+
+
+
+
+Enterprise Scheduling Tools
+============================
+ActiveBatch
+Autosys
+ControlM
+
+
+
+List Of The Top Infrastructure Monitoring Software
+===========================================
+BMC
+IBM Tivoli Monitoring
+Braodcom
+Nagios
+SolarWinds Server and Application Monitor
+Dynatrace
+
+
+
+Identity and Access Management Tools
+=======================================
+https://www.columnit.com/top-5-identity-access-management-tools.html
+
+https://solutionsreview.com/identity-management/identity-management-solutions-directory/
+
+
+Container Orchestration Tools:
+=================================
+https://geekflare.com/container-orchestration-software/
+https://devopscube.com/docker-container-clustering-tools/
+
+Kubernetes
+OpenShift
+Nomad
+Docker Swarm
+Docker Compose
+MiniKube
+Marathon
+Cloudify
+Rancher
+Containership
+AZK
+GKE
+AKS
+AWS EKS
+

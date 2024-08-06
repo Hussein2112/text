@@ -1,0 +1,27 @@
+in class assignment
+
+First create a user called cadmin and assign a password. Do NOT forget the passwd (-:
+
+1- 
+as user cadmin, touch two files. call them abc (one is created in /tmp and the other in /home/cadmin/)
+
+2- find all the files called abc in your system. Do NOT show any error messages on your screen.
+
+
+3- This time find all files called abc again but delete them at the same time.
+
+4- What is the difference between
+
+  # rm file1 2>/tmp/err.txt
+   and
+  #rm file1  2>/dev/null
+
+5- as user cadmin 
+   a- copy the /etc/passwd file to your home directory and call it "passwd.bak"
+   b- cat the file but show only the first field.
+
+
+6- How many lines are in "passwd.bak" file that you just copied locally to /home/cadmin
+
+7- cat the passwd.bak file but do NOT show any lines that contain the string root 
+   and redirect the output to a file passwd.1  

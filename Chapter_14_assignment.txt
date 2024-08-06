@@ -1,0 +1,32 @@
+Assignment
+
+
+1- Create a cron job that deletes file /tmp/tempfile from the system
+   at the first of every month at 7:00 PM
+
+
+2- Schedule a job that reboots the system 10 minutes from now
+
+
+3- What is the difference between cron jobs and at jobs
+
+4- as root what command would you run to edit the cron jobs of user cadmin
+
+5- Which directory contains the User crontab files
+
+6- What is a Git repository
+
+
+7- What command will create a new git repository in the directory /MyGitRepo
+
+
+8- What is the difference between automation and orchestration
+
+9- What is the use of kickstart
+
+10- List 5 open source Orchestration Tools
+
+11- What isInfrastructure as a code
+
+8- 
+

@@ -1,0 +1,86 @@
+Hello there,
+
+Would you like to know exactly where to go on the web to find the best Linux job opportunities?
+
+You would?
+
+Good.  Because below you'll find links to over 30 web sites where you can find good-paying Linux jobs.  (Even if you're not looking for a job right now you might want to save this email for when you are...)
+
+By the way, you don't have to live in a large city to get a good Linux job these days.  It's becoming very common for companies to hire non-local Linux talent.
+
+I'm just one of many examples.  I've worked remotely for several years now.  I love it because I can work from anywhere there's an Internet connection:  From home, from my parent's house, and from a hotel room while the rest of my family enjoys the pool.  (Ok, it's not always perfect, but it sure beats commuting!)
+
+On to the list!
+
+I've personally got jobs from these remote-specific job boards:
+https://www.flexjobs.com
+https://www.virtualvocations.com
+
+Other Remote-specific job boards:
+https://weworkremotely.com
+https://remotejobr.com
+https://www.wfh.io
+https://remoteok.io/remote-linux-jobs
+https://goremote.io/search/linux
+https://www.cybercoders.com/jobs/remote-linux-engineer-jobs
+
+Traditional job boards:
+https://www.monster.com
+http://www.indeed.com
+http://www.dice.com
+https://www.glassdoor.com
+https://www.jobisjob.com
+http://www.simplyhired.com
+https://www.ziprecruiter.com
+http://www.careerbuilder.com
+https://www.cybercoders.com
+
+Craigslist
+
+Look in San Francisco because there are many tech-heavy companies that hire local and remote workers.
+https://sfbay.craigslist.org/sfc
+
+LinkedIN
+https://www.linkedin.com/jobs/linux-remote-jobs
+
+Here's just a tiny sampling of awesome companies that hire remote IT workers.
+
+Check out the careers section on each of these sites.
+http://rackspace.com
+http://xerox.com
+http://dell.com
+http://hp.com
+https://www.ca.com
+http://www.dxc.technology
+https://www.cognizant.com
+https://www.accenture.com
+https://www.ibm.com
+https://www.tcs.com
+http://www.wipro.com
+https://www.hcltech.com
+https://www.infosys.com
+https://www.capgemini.com
+
+For immediate cash, consider freelancing or consulting.
+
+You don't have to work for just one company... you can work on several smaller projects from different companies.
+https://sfbay.craigslist.org/sfc
+https://www.upwork.com
+https://www.freelancer.com
+http://www.guru.com
+
+By the way, when you're looking for Linux jobs be aware that they often masquerade as different job titles.  Here are a few to watch out for:
+Linux Administrator
+Linux System Administrator
+Linux System Engineer
+Linux Engineer
+Operations Engineer
+SRE (Site Reliability Engineer)
+DevOps Engineer
+Platform Engineer
+Sysadmin
+Of course, there will be even more variations to the job titles when you add prefixes such as "Junior" or "Senior" to the mix.  You'll also find plural forms of the some of the words such as "Linux Systems Engineer".
+
+May you find your dream job, no matter what it's called!
+
+All the best,

@@ -1,0 +1,48 @@
+1- Using a symbolic Method, how do you remove the write 
+   and execute for group and others on file1 
+
+
+2- Using Absolute method, how do you add the SUID bit on a file
+   that has the following permissions
+
+   -rwxr-x---     file1
+
+
+3- Explain the effects of the SGID bit on a directory
+
+
+
+5- What are three commands you can use to check the attributes/permissions of a file
+
+
+6- How would you recersively change the ownership of the directory /opt/nagios 
+   to the user nagios and the group nagios
+
+7- Using ACL how do you verify the permissions on a file
+
+
+8- Using ACLs how do you add r-x for the user susan on file1in class assignment
+
+1- 
+as user cadmin, touch two files. call them abc (one is created in /tmp and the other in /home/cadmin/)
+
+2- find all the files called abc in your system. Do NOT show any error messages on your screen.
+
+
+3- This time find all files called abc again but delete them at the same time.
+
+4- What is the difference between
+
+  # rm file1 2>/tmp/err.txt
+   and
+  #rm file1  2>/dev/null
+
+5- as user cadmin 
+   a- copy the /etc/passwd file to your home directory and call it "passwd.bak"
+   b- cat the file but show only the first field.
+
+
+6- How many lines are in "passwd.bak" file that you just copied locally to /home/cadmin
+
+7- cat the passwd.bak file but do NOT show any lines that contain the string root 
+   and redirect the output to a file passwd.1  

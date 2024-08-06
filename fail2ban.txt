@@ -1,0 +1,9 @@
+fail2ban-client set sshd unbanip IPADDRESS
+
+ journalctl -b -u fail2ban
+
+fail2ban-client status
+
+fail2ban-client status sshd #For example to show banned IPs in sshd jail:
+
+https://www.tutorialspoint.com/how-to-secure-the-sshd-using-fail2ban-on-rhel-7-x-centos-7-x

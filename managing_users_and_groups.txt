@@ -1,0 +1,51 @@
+Questions:
+
+1-	What is the file name that contains the users
+        /etc/passwd
+
+2-	What is the file name that contains all the groups 
+          /etc/group
+
+3-	Create a new group (cohorts) with group id 5000
+          groupadd -g 5000 cohorts
+
+4-	Create a new user (susan) and make her a member of the group cohorts
+          useradd -G cohorts susan
+ 
+5-	List all the hidden files in susan’s home directory
+         ls -la /home/susan/
+
+6-	Modidfy user susan’s attributes and add a comment 
+         usermod -c "Finanace Manager" susan
+       
+7-	 What is the difference between su and su –
+         su retains original users's profile/variables
+         su - launches a new shell and it is a better practice
+
+8-	What command will you run to see all the users with failed login attempts
+        lastb  (need root privilege to run)
+
+9-	What is the significance of the wheel group in Centos
+        Enables admin privilege to its members         
+
+10-	What command do you use to edit /etc/sudoers
+         visudo
+
+11-	Why is it important to disable root from remote login
+        -less chance for hackers to access the system as root
+        -harder to audit when users are accessing as root directly
+
+12-	As root , what command would you use to change a user’s passwd
+         passwd username
+
+13-	Explain the fields in the /etc/passwd file
+         username:passwd:UID:GID:Comment:home directory:SHELL
+
+
+14-	List password aging information for user susan
+        chage -l susan
+
+
+15-	What is the primary difference between .bashrc and .bash_profile
+        .bash_profile is read with first login
+        .bash_rc is read with all logins

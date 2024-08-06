@@ -1,0 +1,92 @@
+Setting up NFS Server
+=====================
+In a network, a machine which provides files and folders to
+other devices on the network is known as a File Server.
+
+Types of File Servers:
+=====================
+
+A)NFS
+B)FTP (Now removed from Redhat Course)
+c) Samba
+
+
+NFS is a network filesystem used for Sharing files/folders over a network.
+It is a platform dependant service which allows to transport data in between
+Similar Operating Systems. (Works on Linux and UNIX servers)
+
+It was introduced by SUN MicroSystems. 
+It does NOT support Authentication 
+In Centos7/RHEL7 NFS version 4 is used
+
+In this document, we are going to describe how to set up an NFS server and one NFS client.
+In this example, the server IP address is 192.168.27.5
+Your Server IP will most likely be different.
+
+
+
+                       Requirements of NFS Server
+                        ==========================
+Here are the four different things you need on your NFS Server.
+
+A- Packages:           B- Service/Daemon:           C- Ports:           D-Debugging tools:
+------------           ----------------             =========           ==================
+1- nfs-utils*          1- nfs.server.service       2049 (NFS)             exportfs
+2- rpcbind*            2- rpc-bind.service         111 (Port Mapper)
+
+
+
+Server Side Activity:
+=====================
+
+install the packages:
+=================
+yum install nfs-utils* rpcbind*
+
+
+Edit /etc/exports:
+-----------------
+mkdir /share
+vi /etc/exports
+
+
+
+/share        *(rw,async,no_root_squash)      
+ :wq!
+#Make sure the * is next to the ( like *(, otherwise file will get mounted as readonly. * stands for all clients
+
+Activate the Services:
+=====================
+
+systemctl enable nfs-server.service
+systemctl restart nfs-server.service
+
+Open the firewall ports:
+=======================
+
+firewall-cmd --permanent --zone=public --add-service={rpc-bind,mountd,nfs}
+firewall-cmd --reload
+
+
+
+#run the command exportfs -rv to verify that the server is exporting the filesystem
+
+
+On the Client:
+=============
+#yum install nfs-utils*
+#apt install nfs-client*   for ubuntu ... tested on Linux Mint
+#showmount -e YOURSERVERIP #(to see the exported directory from the server)
+
+Mount the NFS filesystem from the server to the client
+#mkdir /client   #Create this directory on the Client machine
+
+mount YOURSERVERIP:/share   /client
+#df -h  (To confirm that the directory from your server got mounted)
+
+To permanently mount the filesystem on the client:
+
+vi /etc/fstab
+YOURSERVERIP:/share /client nfs defaults 0 0
+#mount -a
+#df -h  (To confirm that the directory from your server got mounted)

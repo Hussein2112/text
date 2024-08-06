@@ -1,0 +1,56 @@
+1- create a new file called hmoving in the /var folder
+
+2- create a hard link of hmoving in the cadmin home folder
+edit the hmoving file from within the home folder by adding your name on the first line
+save it
+3- view the file from the /var directory
+4- move the file from the /var directory to /tmp
+5- edit the hmoving file from within the home directory -- can you and does the edit show in both files?
+
+6- create a new file called smoving in the /p3 folder (create the directory)
+
+7-  create a soft (symbolic) link of smoving in the cadmin home folder
+
+
+ 
+
+8- What is the difference between hard and soft links?
+
+9- Create a new file in the /p3 directory with the touch command and call it file1
+
+10- View the default permissions on file1
+
+11-  Change the default permission so that the next file created will have a permission looking like rw- r-- ---
+
+12-  Create file2 by using the touch command (did the permissions get applied correctly?)
+
+13- Enter mkdir /p3/afiles; chmod 1740 /p3/afiles
+
+14-  View the permissions
+
+15-  Enter chmod 1741 /p3/afiles
+
+16- View the permissions
+
+ 
+
+17 What is the difference between T and t in the permission fields?
+
+18 - Create a tar file of /home/cadmin directory. call it cadmin.tar
+
+19-  Make sure that no one (not even root) can delete the cadmin.tar file
+
+20- Create 3 users with sudo rights
+
+· Tech1,Tech2,Tech3 with a password of password
+
+21- Create 3 users
+
+· StaffA, StaffB, StaffC with a password of password
+
+
+1. StaffB will not start for 11 days so lock the user account
+
+2. The 3 Staff Users should belong to a group called Staffers and the group staffers should be group  of the /dir1/parent/child directory
+
+ 

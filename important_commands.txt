@@ -1,0 +1,46 @@
+#     #  #     #  #     #
+ #   #   #     #  ##   ##
+  # #    #     #  # # # #
+   #     #     #  #  #  #
+   #     #     #  #     #
+   #     #     #  #     #
+   #      #####   #     #
+
+
+https://www.ostechnix.com/download-rpm-package-dependencies-centos/
+===================================================================
+
+Download A RPM Package With All Dependencies In CentOS
+
+
+Method 1  Using Downloadonly plugin
+We can easily download any RPM package with all dependencies using Downloadonly plugin for yum command.
+
+To install Downloadonly plugin, run the following command as root user.
+
+# yum install yum-plugin-downloadonly
+Now, run the following command to download a RPM package.
+
+# yum install --downloadonly <package-name>
+By default, this command will download and save the packages in /var/cache/yum/ in rhel-{arch}-channel/packages location. However, you can download and save the packages in any location of your choice using downloaddir option.
+
+# yum install --downloadonly --downloaddir=<directory> <package-name>
+Example:
+
+# yum install --downloadonly --downloaddir=/root/mypackag nginx  (or nmap)
+
+
+================================================================
+John the Ripper
+apt install john
+or 
+rpm -Uvh john-1.8.0-6.ep7.x86_64.rpm
+you can download it from google using the string
+"download john the ripper for centos 7"
+
+Read the Examples files for usage
+#gzip -d /usr/share/doc/john/EXAMPLES.gz
+#less /usr/share/doc/john/EXAMPLES
+================================================================
+
+sqlzoo.net

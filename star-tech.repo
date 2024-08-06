@@ -1,0 +1,5 @@
+[star-tech]
+name=star-technology-consulting and services
+baseurl=http://144.202.51.229/osrepo
+enabled=1
+gpgcheck=0

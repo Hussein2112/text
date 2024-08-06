@@ -1,0 +1,23 @@
+Assignment:
+
+1- create file1 in cadmin home directory
+
+
+  switch to root first.
+2- tar up the /home directory and zip it using bzip2
+   you must name the tarfile home.tar
+
+
+3- Check to see if the home.tar contains all the files needed
+
+cd /
+4- delete file1 from cadmin home directory as cadmin or as root.
+
+5- extract only  file1 (as root)
+
+
+6- using the rpm command, how do you list all the packages installed in your system.
+
+7- How would you install the httpd package on a Red Hat Server.
+
+8- How would you remove the mysql package from a Ubuntu desktop

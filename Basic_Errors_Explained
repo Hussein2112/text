@@ -1,0 +1,43 @@
+We are going to explain some of the most common errors
+that confuse newcomers to linux
+
+I- command not found
+A- Above error message could appear if you are trying to run a 
+   script/command and the directory of your script or command
+   is not already defined in the PATH variable.
+   Another possible reason for the error is that you might have mistyped the command.
+   
+   Possible Solutions:
+   1- First confirm if your current directory is in your PATH variable.
+      echo $PATH
+      pwd
+      Solution to this is to add your current directory to your path
+      by editing your .bash_profile file and then source the profile. Example: "source ~/.bash_profile"
+      then try your command again.
+
+      or
+
+
+   2- Simply Run the command/script using the full path (Absolute Path)
+      Example: /home/james/script1.sh
+               where script1.sh is the script you are trying to run
+               and /home/james is where your script is located
+   3-Run the command/script using a relative path
+     Example: ./script1.sh
+              ./ tells the shell to run the command/script from the current directory.
+
+B- Another reason might be that you mistyped the command
+   and therefore the command you typed actually doesn't exist
+
+
+II- Permission denied
+
+a- The user running the command/script does NOT have execute permission 
+   for the command/script
+   run the command
+   ls -l <commandname>
+   to verify the permission issue.
+   also, run the following command to verify your current user.
+   whoami
+
+b- 

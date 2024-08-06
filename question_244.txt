@@ -1,0 +1,5 @@
+10:WebSvr01:10.10.50.21:Main
+11:WebSvr02:10.10.50.22:Acconting
+12:WebSvr03:10.10.50.23:Intranet 12:WebSvr03:10.10.50.23:Intranet
+20:NFS01:10.10.20.21:FileServer
+30:SMTP01:10.10.30.31:Email

@@ -1,0 +1,73 @@
+https://gparted.sourceforge.io/livecd.php 
+
+GParted live is based on Debian live, and the default account is "user", with password "live". There is no root password, so if you need root privileges, login as "user", then run "sudo" to get root privileges. 
+Available boot parameters
+
+
+
+You can find the available boot parameters for GParted live here. 
+Included Packages
+GParted Live includes additional packages, such as:
+Graphical Utilities
+Right click on the desktop to access a pop-up menu. 
+lxterminal
+- Terminal emulator (provides access to command line)
+pcmanfm
+- Graphical file manager
+leafpad
+- Graphical text editor
+netsurf
+- Small web browser
+gsmartcontrol
+- Hard disk drive and SSD health inspection tool
+calcoo
+- RPN and algebraic scientific calculator
+Command Line Utilities
+fsarchiver
+- File system archiver and restorer
+partclone
+- Backup partitions into a compressed image file (e.g., partclone.ext4)
+partimage
+- Backup partitions into a compressed image file
+testdisk
+- Data recovery tool that can help recover lost partitions
+gpart
+- (Older) data recovery tool that can help recover lost msdos partition tables
+grub
+- GRand Unified Bootloader for restoring GRUB 2 boot loader
+mc
+- Text based file manager known as Midnight Commander
+nano
+- Text editor
+vim-tiny
+- Enhanced vi text editor
+parted
+- Partition table editor
+fdisk
+- MSDOS partition table editor
+sfdisk
+- MSDOS partition table editor also useful to save/restore partition table to/from a file
+gdisk
+- GPT partition table editor
+sgdisk
+- GPT partition table editor also useful to save/restore partition table to/from a file
+gptsync
+- GPT and MSDOS partition tables synchronization tool useful for Mac OS X users
+openssh
+- Secure shell (ssh) connectivity tool suite
+screen
+- Screen manager with VT100/ANSI terminal emulation
+ping
+- Check network connectivity to another host on a network
+rsync
+- Fast, versatile, remote (and local) file-copying tool
+telnet
+- Communicate with another host using the TELNET protocol
+traceroute
+- Print the route packets trace to network host
+bc
+- Arbitrary precision calculator language
+To view all of the included packages you can either:
+    refer to the "packages-x.y.z-w.txt" file in the download directory,
+or
+    view the file "live/packages.txt" file inside the GParted Live iso file or zip file.

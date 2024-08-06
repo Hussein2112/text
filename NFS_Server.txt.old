@@ -1,0 +1,79 @@
+Setting up NFS Server
+=====================
+In a network, a machine which provides files and folders to
+other devices on the network is known as a File Server.
+
+Types of File Servers:
+=====================
+
+A)NFS
+B)FTP (Now removed from Redhat Course)
+c) Samba
+
+
+NFS is a network filesystem used for Sharing files/folders over a network.
+It is a platform dependant service which allows to transport data in between
+Similar Operating Systems. (Works on Linux and UNIX servers)
+
+It was introduced by SUN MicroSystems. 
+It does NOT support Authentication 
+In Centos7/RHEL7 NFS version 4 is used
+
+                       Requirements of NFS Server
+                        ==========================
+A- Packages:           B- Service/Daemon:           C- Ports:           D-Debugging tools:
+------------           ----------------             =========           ==================
+1- nfs-utils*           1- nfs.server.service       2049 (NFS)             exportfs
+2- rpc-bind*            2- rpc-bind.service         111 (Port Mapper)
+
+
+
+Server Side Activity:
+=====================
+
+install the packages:
+=================
+yum install nfs-utils* rpcbind*
+
+
+Edit /etc/exports:
+-----------------
+vi /etc/exports
+/u01/share 192.168.56.103/24(rw,async)
+
+:wq
+
+#or
+#/u01/share        * (rw,async)      
+
+Activate the Services:
+=====================
+
+systemctl enable nfs-server.service
+systemctl restart nfs-server.service
+
+Open the firewall ports:
+=======================
+
+firewall-cmd --permanent --zone=public --add-service={rpc-bind,mountd,nfs}
+firewall-cmd --reload
+
+
+
+#run the command exportfs -rv to verify that the server is exporting the filesystem
+
+
+On the Client:
+=============
+#yum install nfs-utils*
+
+#showmount -e 192.168.56.103 #(to see the exported directory from the server)
+
+Mount the NFS filesystem from the server to the client
+#mount 192.168.56.103:/u01/share   /mnt/share
+
+To permanently mount the filesystem on the client:
+
+vi /etc/fstab
+192.168.56.103:/u01/share /mnt/share nfs rw,sync,hard,intr,_netdev 0 0
+

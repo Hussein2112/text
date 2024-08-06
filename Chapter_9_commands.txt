@@ -1,0 +1,23 @@
+1- which directory contains all available regional timezones
+   /usr/share/zoneinfo
+
+2- List three ways you can change your timezone
+   1- create a link of /etc/localtime to your desired timezone   Ex: cd /etc; ln -sf /usr/share/zoneinfo/Chicago localtime  
+   2- use the timedatectl set-timezone command                   Ex: timedatectl -set-timezone=Africa/Mogadishu
+   3- Change the TZ environment variable                         Ex: export TZ=America/Chicago
+
+3- How do you create a file with extention of today's date
+   example file.03-09-2020
+   #touch file.$(date +%d-%m-%y)
+
+4- which command would you use to adjust your hardware clock
+   hwclock
+   #hwclock --set --date="2020-03-09 07:45:05"
+hwclock --adjust to compensates for drift
+
+
+5- what commands would you use to check or use your locales
+   #localectl list-locales
+   #localectl list-keymaps
+   #localectl set-keymap
+   #localctl set-locale 

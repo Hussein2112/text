@@ -1,0 +1,1044 @@
+1- List three modes of the vim editor
+
+2- What command is used to change the owner, 
+the group, or both for a file or directory?
+
+3- List the 4 stages of process status
+
+4- Give a brief description of what positional parameters are
+
+5- What command will list all your environment variables
+
+6- Which command will let you see the most recent entries of 
+   the /var/log/secure file
+
+
+
+7- Which of the following is a technique of controlling what a process (such as a user) can access on a file system by changing the root directory of that process's environment?
+chroot jail
+
+
+From the following, what is the purpose of the export command?
+To convert a local shell variable into a global environment variable
+
+Which of the following is a feature of the Linux kernel that provides redundancy and improved performance for block storage devices?
+
+
+Virtual file system
+
+unselected
+Logical Volume Manager
+
+unselected
+DM-Multipath
+
+unselected
+File system label
+
+
+--Which command will generate a response request from the sending computer and should receive a reply from the destination computer?
+ping
+
+
+--Virtual machine templates can make deployments much more efficient. What template contains the necessary configuration files, packages, etc., for virtual machines and network devices?
+
+
+JavaScript Object Notation (JSON)
+
+unselected
+Container images
+
+unselected
+YAML Ain't Markup Language (YAML)
+
+selected
+Open Virtualization Format (OVF)
+
+
+--You wish to set the monetary value setting of your Linux environment to the U.S. dollar. Which environment variable can you specify, regardless of any other location parameters that are set on the system?
+selected
+LANG
+
+unselected
+LC_ALL
+
+unselected
+LC_ADDRESS
+
+unselected
+LC_MONETARY
+
+
+--You wish to configure SSH (secure shell) to disable root login. What is the first thing to do on the destination server?
+Edit /etc/ssh/sshd_config.
+
+--Which operator includes checking if operands are equal, if one operand is less than or greater than another operand, and more?
+unselected
+Comparison operators
+
+unselected
+String operators
+
+unselected
+Logical operators
+
+selected
+Arithmetic operators
+
+--Which of the following is a distributed version control system primarily used by developers who are collaborating on projects?
+Git
+
+--When creating a Bash script, which of the following lines should be added to the beginning?
+#!/bin/bash
+
+--Which of the following commands does NOT provide software package management including application updates?
+tar
+
+--What enables users to choose which operating system or kernel version to boot in a multi-platform environment?
+unselected
+Systematic drift
+
+selected
+GNU Grand Unified Bootloader (GNU GRUB)
+
+unselected
+Graphical User Interface (GUI)
+
+unselected
+Localization
+
+--System logs that record a "Machine Check Exception" error message usually indicate an issue with which component?
+unselected
+Storage
+
+unselected
+Processor
+
+unselected
+Network
+
+selected
+Memory
+
+--What can provide an immense amount of information about how the server boots, what services are running and how they are performing?
+unselected
+Monitoring services
+
+selected
+Log services
+
+unselected
+Proxy service
+
+unselected
+Load balancing services
+
+--You're editing a file in Vim and you realize that you've made several errors and decide to start over with your editing. How do you leave the file without saving any changes that you've made?
+Press Esc to enter command mode and then enter :q!
+
+unselected
+Press Esc to enter command mode and then enter :q
+
+unselected
+Press Esc to enter command mode and then enter :w
+
+unselected
+Press Esc to enter command mode and then enter :e!
+
+
+--What defines exactly what a user is allowed to do with a particular file or directory?
+
+Special permissions
+
+selected
+Permission attributes
+
+unselected
+Permissions
+
+unselected
+Ownership
+
+--Which command is used to test the maximum throughput an interface will support?
+netcat
+
+selected
+iperf
+
+unselected
+tcpdump
+
+unselected
+iftop
+
+
+--A user would like to be able to work remotely. Access should be configured as if the user was physically present to the network location. Which service should you configure?
+Proxy
+
+unselected
+Samba
+
+unselected
+SSH
+
+selected
+VPN
+
+
+--Between the GNOME (GNU Network Object Model Environment), a type of desktop environment, and KDE (K Desktop Environment) Plasma which is the most popular and why?
+KDE Plasma is popular because it is used for Linux Mint distributions.
+
+unselected
+KDE Plasma is popular because it supports modularity through widgets.
+
+selected
+GNOME is popular because its another default environment for Linux Mint Distributions along with Cinnamon.
+
+unselected
+GNO
+
+
+--What boot option is a part of the Unified Extensible Firmware Interface (UEFI) standard that enables a client to retrieve the necessary boot loader and system files from a server over the network?
+Boot from NFS
+
+unselected
+Boot from ISO
+
+unselected
+Boot from HTTP/FTP
+
+selected
+Preboot Execution Environment (PXE)
+
+--In a Linux system processes are prioritized based on a number from -20 to 19. This number value is known as which of the below?
+nice
+
+unselected
+process ID (PID)
+
+unselected
+kill signal
+
+unselected
+renice
+
+
+--You are using Git version control for a development project. You would like each version to have a comment to keep track of changes. Which of the following can you use to accomplish this?
+git commit -m " sdkfjdskjf"
+
+
+--What has the ability to inventory software, enabling administrators to easily see installed software and software version information?
+rpm?
+
+
+--What can be managed though orchestration tools?
+Attributes
+
+unselected
+Build automation
+
+unselected
+Procedures
+
+selected
+Inventory
+
+
+
+--Which of the following commands is an often unreliable way of querying the system for attached hardware components?
+dmidecode
+
+
+--Which one of the following is NOT a default environment variable on a Linux System?
+TZ
+
+unselected
+HOSTNAME
+
+unselected
+PATH
+
+unselected
+SHELL
+
+
+--What was originally a joint Rackspace and NASA (National Aeronautics and Space Administration) project, usually deployed as an IaaS (Infrastructure as a Service) solution to manage cloud resources?
+OpenStack
+
+unselected
+Ansible
+
+unselected
+Kubernetes
+
+unselected
+Puppet
+
+
+--Where can you look to find a listing of all the regional time zones recognized by your Linux distribution?
+unselected
+timedatectl
+
+unselected
+/etc/timezone
+
+selected
+/usr/share/zoneinfo
+
+unselected
+date
+
+----Which context-based permissions scheme works with file system objects based on paths, rather than referencing inodes?
+AppArmor
+
+unselected
+Mandatory Access Control (MAC)
+
+unselected
+Multi-level Security (MLS)
+
+selected
+Security Enhanced Linux (SELinux)
+
+
+--You are editing a file with the Vim editor. You’ve decided to quit without saving changes. Which command do you issue?
+
+
+---What is an improvement of the Grand Unified Bootloader (GRUB) 2 system compared to the GRUB system?
+unselected
+Enables users to choose which operating system or kernel version to boot in a multi-platform environment.
+
+unselected
+The first physical sector on a storage drive and a type of partition structure.
+
+selected
+Support for custom graphical boot menus and themes.
+
+unselected
+Enables users and applications to read from and write to a block storage device directly.
+
+
+--What command will generate a response request from the sending computer and should receive a reply from the destination computer?
+ping
+
+unselected
+traceroute
+
+unselected
+netstat
+
+unselected
+tracepath
+
+----What is a process or function that transforms plaintext input into an indecipherable fixed-length output and ensures that this process cannot be feasibly reversed?
+Encryption
+
+unselected
+Linux Unified Key Setup (LUKS)
+
+unselected
+Hashing
+
+unselected
+Chroot jail
+
+
+--Which of the following partition types has a limitation of four primary partitions?
+Raw Partition
+
+selected
+MBR (Master Boot Record)
+
+unselected
+GPT (GUID Partition Table)
+
+unselected
+PXE (Preboot Execution Environment)
+
+
+--What is the act of referencing or retrieving the value of a variable called?
+
+ANSWER
+unselected
+Operators
+
+unselected
+Syntax
+
+unselected
+Variable assignment
+
+selected
+Substitution
+
+
+--A user is having difficulty connecting to an access point with a Linux laptop. Which command can you use to check the laptop’s wireless network adapter configuration?
+ip
+
+unselected
+nmcli
+
+unselected
+ifconfig
+
+selected
+iwconfig
+
+
+--Which of the following wireless connection standards is primarily used to create a local area network (LAN) for home and office computing?
+NIC
+
+unselected
+NFC
+
+selected
+Wi-Fi
+
+unselected
+Bluetooth
+
+
+--Which of the following is an example of the myscript.sh arg1 arg2 arg3 command?
+
+Positional parameters
+
+unselected
+Functions
+
+unselected
+Globbing
+
+unselected
+Command substitution
+
+--Which command is used to control password expiration, expiration warnings, inactive days, and other information for existing accounts?
+unselected
+passwd
+
+selected
+chage
+
+unselected
+useradd
+
+unselected
+usermod
+
+--You are given a task to secure users' access to the Internet and improve the browsing experience. What type of service or server role can you set up to accomplish this task?
+unselected
+Proxy
+
+unselected
+Load balancing
+
+selected
+Authentication
+
+unselected
+Clustering
+
+
+--If you need to change a shell variable into an environment variable, which command would you use?
+env
+
+unselected
+set
+
+selected
+export
+
+unselected
+alias
+
+--You would like to archive multiple files into a single file. Which of the following would accomplish this?
+tar
+
+--Your team has decided to use only one internal Domain Name System (DNS) server and one external. You must change the DNS server IP (Internet Protocol) addresses on every Linux server. Which file can you edit to change the IP addresses?
+/etc/resolv.conf
+
+unselected
+/etc/nsswitch.conf
+
+unselected
+/etc/sysconfig/network-scripts/
+
+unselected
+/etc/sysconfig/network
+
+
+--What is the permission that allows a user to have similar permissions as the owner of the file?
+
+unselected
+Immutable flag
+
+selected
+SGID
+
+unselected
+SUID
+
+unselected
+Sticky bit
+
+--What is the fundamental principle of keeping organizational information accurate, free of errors, and without unauthorized modifications?
+Availability
+
+selected
+Integrity
+
+unselected
+Confidentiality
+
+unselected
+Cybersecurity
+
+
+--You are connected to a remote server using SSH (secure shell) and you need to locate a file in a large share directory using the command-line interface. You want to search all the files in a directory but only want to return files starting with 'ant.' How can you combine the two commands together?
+grep
+
+
+--A “bare metal” hypervisor is a type 1 hypervisor. Which of the following hypervisors are NOT type 1?
+
+VMWare ESXi
+
+unselected
+Citrix XenServer
+
+unselected
+Microsoft Hyper-V
+
+selected
+Oracle VM
+
+
+--What is the lifecycle process of starting services, modifying their running state, and stopping them?
+Service
+
+unselected
+Unit files
+
+selected
+Service management
+
+unselected
+System initialization
+
+
+--You are traveling around the world. You get a phone call to administer a Linux server at your company's headquarters facility. You connect to the server using a remote access virtual private network (VPN). Which VPN mode would you typically be using in this situation?
+unselected
+SSL
+
+unselected
+IPSec
+
+unselected
+Tunnel mode
+
+selected
+Transport mode
+
+
+--You are troubleshooting some system issues on your Red Hat Enterprise Linux (RHEL) 7 web server that is managing services on a systemd environment. As part of the troubleshooting process, you want to prevent Apache from running after the system is rebooted. You would like to keep it disabled until the system is ready. How can you accomplish this?
+unselected
+systemctl stop httpd.service
+
+unselected
+chkconfig apache off
+
+selected
+systemctl disable httpd.service
+
+unselected
+service httpd stop
+
+--Which of the following commands is used as an interactive shell for Linux KVM virtual machines?
+unselected
+systemctl
+
+unselected
+libvirt
+
+selected
+virsh
+
+unselected
+virt-manager
+
+----Which of the following utilities is used to report on problems detected during runtime?
+Which of the following utilities is used to report on problems detected during runtime?
+free
+
+selected
+abrt-cli
+
+unselected
+mcelog
+
+unselected
+lshw
+
+--What is a very common packet sniffer and network analyzer?
+
+--You need to configure a network interface on a user’s Linux workstation. Which of the following options is NOT used with the nmcli command?
+unselected
+con down
+
+selected
+link set eth1 up
+
+unselected
+connection show
+
+unselected
+device status
+
+
+--You are currently working on a development project while using Git for source control. The Git repository needs to be updated with changes. What process needs to take place?
+unselected
+pull
+
+unselected
+branch
+
+selected
+commit
+
+unselected
+merge
+
+
+--You are tasked to setup a backup schedule for a file server which will store backups to a local storage device. A backup.sh script was created to automate the backup. This script must only run after 5 p.m. daily when users are no longer working. Given the parameters, how can you schedule this automatic backup job?
+unselected
+at 6:00 PM
+
+unselected
+A cron job
+
+unselected
+* 5 * * * /schedules/backup.sh
+
+selected
+5 * * * * /schedules/backup.sh
+
+--Generally speaking, where are most Linux system logs located?
+unselected
+/etc/rsyslog.conf
+
+unselected
+rsyslogd
+
+unselected
+syslog-ng
+
+selected
+/var/log
+
+
+--What are the parameters of a /etc/sysconfig/network file?
+unselected
+{IP address} {host name}
+
+selected
+Networking
+Networking_IPv6
+Hostname
+Gateway
+
+unselected
+sched_latency_ns
+sched_wakeup_granularity
+sched_tunable_scaling
+
+unselected
+Retry
+Select-timeout
+Lease
+Request
+Fixed-address
+Server-name
+
+
+--You are writing a Bash script and would like to connect multiple values together for evaluation. What type of operator should you use in this script?
+unselected
+Logical
+
+unselected
+String
+
+selected
+Comparison
+
+unselected
+Arithmetic
+
+
+--Several of your users want to install and use Linux at home but are confused by firewall rules and managing a firewall for themselves. What tool can you recommend to help them configure their firewalls?
+unselected
+Firewall zones
+
+unselected
+Netfilter
+
+unselected
+IP (Internet Protocol) sets
+
+selected
+Uncomplicated Firewall (UFW)
+
+
+--You are working on a software development project and would like to view a list of the application's shared dependencies. With which command can this be accomplished?
+unselected
+make
+
+selected
+ldd
+
+unselected
+wget
+
+unselected
+tar
+
+
+----When troubleshooting software patching and update issues, which of the following is NOT helpful?
+unselected
+Ensure that dependencies and software versions are satisfied for the patches and updates.
+
+unselected
+Test patches and updates before deploying them to production systems.
+
+unselected
+Verify library file versions and availability.
+
+selected
+Ensure there is network connectivity when retrieving updates.
+
+
+--Which of the following fields is NOT found in the /proc/cpuinfo file?
+unselected
+cache size
+
+unselected
+vendor_id
+
+selected
+memory
+
+unselected
+processor
+
+
+--What command is used to gather information about how long it took to execute a command?
+unselected
+env
+
+unselected
+alias
+
+selected
+time
+
+unselected
+export
+
+
+--What service gives you access to the storage area network (SAN) and its stored content?
+unselected
+VPN service
+
+selected
+Clustering service
+
+unselected
+Database services
+
+unselected
+File and print services
+
+----IP Address
+Which of the following commands would be used to set a static IP address on a network interface?
+
+IP Address
+Which of the following commands would be used to set a static IP address on a network interface?
+
+
+
+----AppArmor is a context-based permissions scheme. Which component of AppArmor is a profile violation both logged and prevented?
+unselected
+Modes
+
+selected
+Policies
+
+unselected
+Contexts
+
+unselected
+Tunables
+
+--There are many desktop environments available for Linux.  Which desktop environment is the default desktop environment in most Linux distributions?
+Cinnamon
+
+unselected
+KDE Plasma
+
+selected
+GNOME
+
+unselected
+MATE
+
+
+--You are tasked to configure a (Redundant Array of Independent Disks) RAID 6 volume using 8 disks on your Linux file server. Which disk utility will help you properly configure the RAID?
+selected
+mdadm
+
+unselected
+mkfs
+
+unselected
+fdisk
+
+unselected
+parted
+
+----What primarily protects SSH (secure shell) servers from brute force password cracking attacks?
+unselected
+Intrusion prevention system (IPS)
+
+unselected
+Trusted ports
+
+selected
+Fail2ban
+
+unselected
+DenyHosts
+
+
+--Which of the following locations contains device driver files that enable the system and users to access devices themselves?
+unselected
+/etc/
+
+unselected
+/sys/
+
+selected
+/dev/
+
+unselected
+/proc/
+
+
+--What is one of the biggest issues when managing software on a Linux system?
+unselected
+Instructions
+
+selected
+Dependencies
+
+unselected
+Compilation
+
+unselected
+Downloads
+
+
+--You need to temporarily pause a job, what command do you use?
+selected
+Ctrl+Z 
+
+unselected
+&
+
+unselected
+renice
+
+unselected
+nohup
+
+
+--What is the preferred method of package management in Debian-derivatives today?
+unselected
+Yellowdog Updater, Modified (YUM)
+
+unselected
+Zypper
+
+unselected
+Advanced Package Tool (APT)
+
+unselected
+Dandified YUM (DNF)
+
+--What common system setting can you disable to prevent users from rebooting a system and disrupting service availability?
+unselected
+Protect the boot loader configuration with a password.
+
+unselected
+Consider establishing a public key infrastructure (PKI).
+
+selected
+Disable Ctrl+Alt+Del.
+
+unselected
+Restrict access to cron.
+
+--What is an application that enables you to view, create, or modify the contents of text files?
+unselected
+Vim
+
+selected
+Text editor
+
+unselected
+Motions
+
+unselected
+Editing operators
+
+--Which of the following primarily protects SSH (secure shell) servers and any other system service with an authentication component from brute force password cracking attacks?
+selected
+DenyHosts
+
+unselected
+IPS
+
+unselected
+Fail2Ban
+
+unselected
+IP sets
+
+
+--What is the default device location for encrypted volumes?
+unselected
+/dev/
+
+selected
+/dev/mapper/
+
+unselected
+/proc/
+
+unselected
+/dev/sda1/
+
+
+--You need to review logs on a Linux system. Which of the following log files contains general non-critical system events?
+unselected
+/var/log/kern.log
+
+unselected
+/var/log/syslog
+
+unselected
+/var/log/messages
+
+selected
+/var/log/secure
+
+--There are five different states that a process can be in during this lifecycle. Which state indicates that a process was terminated, but it has not yet been released by its parent process?
+unselected
+Uninterruptible sleep
+
+unselected
+Interruptible sleep
+
+unselected
+Running
+
+selected
+Zombie
+
+--Which of the following processes always has the PID (Process ID) of 1?
+selected
+init daemon
+
+unselected
+pgrep
+
+unselected
+top
+
+unselected
+/etc/inittab
+
+
+--Which of the following is known as a fourth context under Security-Enhanced Linux (SELinux)?
+unselected
+User
+
+selected
+Level
+
+unselected
+Role
+
+unselected
+Type
+
+
+--Vim is a modal editor, and its different modes decide its functionality. Which one of the below is NOT one of the four Vim modes?
+unselected
+execute
+
+unselected
+visual
+
+unselected
+insert
+
+selected
+gedit
+
+
+--You have just used the lprm 4 command. What type of problem are you trying to remedy?
+unselected
+Storage
+
+unselected
+Keyboard
+
+selected
+Printing
+
+unselected
+Memory
+
+--Which of the following commands can be used to securely wipe a storage device?
+unselected
+luksFormat
+
+unselected
+cryptsetup
+
+unselected
+kdestroy
+
+selected
+shred
+
+--You are tasked with deploying a firewall solution that examines more than just destination and source IP (Internet Protocol) address to allow or deny traffic. You wish to examine the entire conversation of a transmission. What type of firewall is ideal for your needs?
+unselected
+Application-layer firewall
+
+unselected
+Stateless firewall
+
+unselected
+Packet filter firewall
+
+selected
+Stateful firewall
+
+
+
+
+
+
+
+
+
+
+
