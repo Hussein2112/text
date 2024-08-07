@@ -2,7 +2,10 @@
         that belong the user cadmin
          
 # find /tmp -user cadmin |xargs rm 2>/dev/null
+or
 # find /tmp -user cadmin -exec rm  -f {} \;
+or
+# find /tmp -user cadmin -delete
 
 
 2-	Schedule the above script so that it runs every Sunday at 10 minutes 
@@ -11,8 +14,8 @@
           * * * * * 
            10 23 * * 0   /root/remover.sh 2>/dev/null
 
-3-	Create an alias for ALL the users. The alias name is “list” and does 
-         “ls -altr”
+3-	Create an alias for ALL the users. The alias name is "list" and does 
+         ls -altr
           vim /etc/bashrc
            alias list='ls -altr'
          :wq
